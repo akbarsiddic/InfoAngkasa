@@ -25,7 +25,9 @@ type News = {
 };
 
 async function getNews() {
-  const res = await fetch('https://api.spaceflightnewsapi.net/v4/articles/', {next: {revalidate: 60}});
+  const res = await fetch('https://api.spaceflightnewsapi.net/v4/articles/', {
+    cache: 'no-store',
+  });
   const data = await res.json();
   return data;
 }
@@ -33,6 +35,8 @@ async function getNews() {
 export default async function News() {
   const newsData = await getNews();
   const data = newsData.results;
+
+  
 
   return (
     <div className="bg-gradient-to-b from-blue-700 via-white to-blue-500">
@@ -54,7 +58,7 @@ export default async function News() {
                   </CardContent>
                   <CardFooter className="flex justify-between">
                     <Button asChild>
-                      <Link href="#">Baca Selengkapnya</Link>
+                      <Link href={news.url} target='_blank'>Baca Selengkapnya</Link>
                     </Button>
                     <Badge className="bg-white text-black">
                       {new Date(news.published_at).toLocaleDateString('id-ID', {
