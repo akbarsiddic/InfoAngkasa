@@ -1,12 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+import {  Plus_Jakarta_Sans } from 'next/font/google'
+ 
 
-const inter = Inter({ subsets: ['latin'] })
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 
 export const metadata: Metadata = {
+  
   title: 'InfoAngkasa',
   description: 'InfoAngkasa adalah website yang berisi informasi tentang angkasa.',
 }
@@ -18,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      
       <body className={plusJakartaSans.className}>{children}</body>
     </html>
   )

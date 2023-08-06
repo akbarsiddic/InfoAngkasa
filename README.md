@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# InfoAngkasa Website
 
-## Getting Started
+InfoAngkasa is a website dedicated to providing the latest news and information about space and astronomy. Explore fascinating articles, discover new discoveries, and stay updated with the wonders of the universe.
 
-First, run the development server:
+## Screenshots
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## ![App Screenshot](https://live.staticflickr.com/65535/53097872000_58b261d7f5_z.jpg)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![App Screenshot](https://live.staticflickr.com/65535/53097469406_9028721324_z.jpg)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Latest Astronomy News: Get the most up-to-date news and articles related to space and astronomy.
+- Explore Planets: Learn about different planets in our solar system, their characteristics, and intriguing facts.
+- Stay Updated: Subscribe to receive regular updates on the latest discoveries and space exploration.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js: A React framework for building fast and scalable web applications.
+- Tailwind CSS: A utility-first CSS framework for building responsive and customizable user interfaces.
+- Nasa API: Provides Astronomy Picture of the Day (APOD)
+- Spaceflight News API: Provides the latest news and articles related to space and astronomy.
+- lucide-react: A library of SVG icons for use in React applications.
