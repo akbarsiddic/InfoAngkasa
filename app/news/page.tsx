@@ -40,7 +40,6 @@ export default async function News() {
 
   return (
     <div className="bg-gradient-to-b from-blue-700 via-white to-blue-500">
-      <MainNav />
       <div className="border-t">
         <div className="grid lg:grid-cols-5">
           <SideBar className="hidden lg:block" />

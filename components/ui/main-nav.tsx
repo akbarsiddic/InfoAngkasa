@@ -11,12 +11,12 @@ export function MainNav() {
             <ul className="flex space-x-4">
               
               <li>
-                <a href="#" className="text-white hover:text-blue-200">
-                  Tentang Kami
-                </a>
+                <Link href="/news" className="text-white hover:text-blue-200">
+                  Berita
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-blue-200">
+                <a href="#footer" className="text-white hover:text-blue-200">
                   Contact
                 </a>
               </li>

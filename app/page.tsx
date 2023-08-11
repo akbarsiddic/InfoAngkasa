@@ -1,4 +1,7 @@
+
+import { Footer } from '@/components/ui/main-footer';
 import { MainNav } from '@/components/ui/main-nav';
+import { PageWrapper } from './PageWrapper';
 import {
   Card,
   CardContent,
@@ -27,9 +30,11 @@ export default async function Home() {
 
   return (
     <div className="bg-gradient-to-b from-blue-700 via-blue-950 to-blue-700">
-      <MainNav />
 
-      <section className="p-4 md:p-8 lg:p-12 ">
+      <PageWrapper>
+      <section className="p-4 md:p-8 lg:p-12 "
+      
+      >
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className=" text-white py-16 flex flex-col justify-center md:p-8  p-4">
             <p className="text-lg mb-2 md:mb-4"> Gambar Astronomi Hari Ini</p>
@@ -51,6 +56,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </PageWrapper>
+
+      <PageWrapper>
       <section className="p-4 md:p-8 lg:p-12">
         <div className="container mx-auto">
           <div>
@@ -59,7 +67,7 @@ export default async function Home() {
               <Card>
                 <CardHeader>Mars</CardHeader>
                 <CardContent>
-                  Mars, "Planet Merah," memiliki permukaan penuh lembah,
+                  Mars, Planet Merah, memiliki permukaan penuh lembah,
                   dataran, dan gunung berapi yang menarik perhatian.
                 </CardContent>
                 <CardFooter>
@@ -156,7 +164,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </PageWrapper>
 
+      <PageWrapper>
       <section className="flex items-center justify-between min-h-screen">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-4 p-8 md:p-20">
@@ -190,6 +200,10 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      </PageWrapper>
+
+
+      <PageWrapper>
       <section className="py-16  text-white">
         <div className="container text-center">
           <h2 className="text-2xl font-bold mb-4">
@@ -215,31 +229,9 @@ export default async function Home() {
           </form>
         </div>
       </section>
-
+      </PageWrapper>
 
       {/* footer */}
-      <footer className=" text-white py-8">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="space-y-4">
-              <h1 className="md:text-2xl text-xl font-bold text-blue-300">InfoAngkasa</h1>
-              <p className="text-sm text-white">
-                Jelajah Angkasa dengan InfoAngkasa
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-blue-300">Contact Us</h2>
-              <p className="text-white">Email: example@infoangkasa.com</p>
-              <p className="text-white">Phone: +62 (123) 456-7890</p>
-              <p className="text-white">Address: Bogor, Universe</p>
-            </div>
-          </div>
-          <hr className="my-8 border-t border-gray-700" />
-          <p className="text-center text-white">
-            &copy; 2023 InfoAngkasa. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
