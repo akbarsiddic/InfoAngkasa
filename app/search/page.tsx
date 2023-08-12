@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { SideBar } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Search from './search';
 import { PageWrapper } from '../PageWrapper';
 type News = {
   title: string;
@@ -25,9 +26,11 @@ type News = {
 
 
 
-export default async function News() {
+export default async function search({params, searchParams}: any) {
 
-  const res = await fetch(`https://api.spaceflightnewsapi.net/v4/articles/?offset=5&limit=5`, {
+  const {search} = searchParams 
+
+  const res = await fetch(`https://api.spaceflightnewsapi.net/v4/articles/?search=${search}&offset=5&limit=5`, {
     cache: 'no-store',
   })
 
@@ -36,13 +39,16 @@ export default async function News() {
 
 
   return (
-    <div className="bg-gradient-to-b from-blue-700 via-blue-950 to-blue-700">
-      <div className="border-t">
-        <div className="grid lg:grid-cols-5">
-          <SideBar className="block" />
-          <div className="col-span-3 lg:col-span-4 lg:border-l">
-            <div className="h-full px-4 py-6 lg:px-6 space-y-4">
-              {results.map((news: News) => (
+    <div>
+
+      <div className="bg-gradient-to-b from-blue-700 via-blue-950 to-blue-700">
+        <div className="border-t">
+          <div className="grid lg:grid-cols-5">
+            <SideBar className="block" />
+            <div className="col-span-3 lg:col-span-4 lg:border-l">
+              <Search />
+              <div className="h-full px-4 py-6 lg:px-6 space-y-4">
+                {results.map((news: News) => (
                   <PageWrapper key={news.id}>
                     <Card className="bg-blue-600 shadow-lg ">
                       <CardHeader className="bg-blue-600 text-white rounded-lg  flex flex-col justify-center ">
@@ -70,7 +76,8 @@ export default async function News() {
                       </CardFooter>
                     </Card>
                   </PageWrapper>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

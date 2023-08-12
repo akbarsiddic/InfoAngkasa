@@ -50,6 +50,7 @@ export default async function Home() {
             <Image
               src={data.url}
               fill
+              sizes='fill'
               alt="apod"
               className="rounded-xl border object-fill"
             />
@@ -191,7 +192,7 @@ export default async function Home() {
               </p>
               <Link
                 href="/news"
-                className="bg-indigo-700 max-w-xs text-white font-semibold py-2 px-4 rounded hover:bg-indigo-600 hover:text-white transition"
+                className="bg-blue-700 max-w-xs text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 hover:text-white transition"
               >
                 Baca Berita
               </Link>
